@@ -44,7 +44,7 @@ const HomePageBlogSection = () => {
                                                 <img src={elem.image} alt="blogsImage" />
                                                 <p className="date">8 April 2022</p>
                                                 <h4 className="blogTitle">{elem.title}</h4>
-                                                <a href="#">Read More</a>
+                                                <a href={`/blog/${elem.slug}`}>Read More</a>
                                             </div>
                                         </>
                                     )

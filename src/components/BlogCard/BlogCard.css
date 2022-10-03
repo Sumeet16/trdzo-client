@@ -8,6 +8,13 @@
     margin-block: 0;
 }
 
+.blog-wrapper a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #ff5e14;
+}
 
 .blog-show-img {
     height: 60vh;

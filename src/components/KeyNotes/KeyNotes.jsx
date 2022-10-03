@@ -33,7 +33,6 @@ const KeyNotes = () => {
 
                                 <h4>Designs & interfaces</h4>
                                 <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</p>
-                                <a href="../services/designs_interfaces.html">Read More</a>
                             </div>
                         </div>
 
@@ -46,7 +45,6 @@ const KeyNotes = () => {
 
                                 <h4>Faster More  Then Speed</h4>
                                 <p>Condimentum consectetur quaerat parturient denouncing pleasure and praising pain was born and I will give you a complete.</p>
-                                <a href="../services/faster_speed.html">Read More</a>
                             </div>
                         </div>
 
@@ -59,7 +57,6 @@ const KeyNotes = () => {
 
                                 <h4>Highly customizable</h4>
                                 <p>Highly customizable parturient denouncing pleasure and praising pain was born and I will give you a complete.</p>
-                                <a href="../services/highly_customizable.html">Read More</a>
                             </div>
                         </div>
 
@@ -72,7 +69,6 @@ const KeyNotes = () => {
 
                                 <h4>Official Support</h4>
                                 <p>Dedicated support quaerat parturient denouncing pleasure and praising pain was born and I will give you a complete.</p>
-                                <a href="../services/official_support.html">Read More</a>
                             </div>
                         </div>
 
@@ -85,7 +81,6 @@ const KeyNotes = () => {
 
                                 <h4>Responsive design</h4>
                                 <p>Responsive design parturient denouncing pleasure and praising pain was born and I will give you a complete.</p>
-                                <a href="../services/responsive_design.html">Read More</a>
                             </div>
                         </div>
 
@@ -98,14 +93,13 @@ const KeyNotes = () => {
 
                                 <h4>Themes & plugins</h4>
                                 <p>Features & plugins parturient denouncing pleasure and praising pain was born and I will give you a complete.</p>
-                                <a href="../services/themes_plugins.html">Read More</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="banner_quote">
                     <p>An investment in knowledge always pay the best interest.</p>
-                    <a href="#" class="btn">View Courses</a>
+                    <a href="/courses" class="btn">View Courses</a>
                 </div>
             </section>
         </>

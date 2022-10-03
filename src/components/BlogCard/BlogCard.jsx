@@ -7,7 +7,7 @@ const BlogCard = ({blog}) => {
         <h1><a href={`/blog/${blog.slug}`} style={{textDecoration: "none", color: "black"}}>{blog.title}</a></h1>
         <p>{blog.description}</p>
         <p style={{fontStyle: "italic"}}>{blog.tags}</p>
-        <button>Read More</button>
+        <a href={`/blog/${blog.slug}`}>Read More</a>
       </div>
   );
 };
