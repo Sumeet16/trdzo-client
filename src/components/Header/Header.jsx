@@ -30,7 +30,7 @@ const Header = (props) => {
     localStorage.removeItem("userData");
     navigate("/", {replace:true})
 
-    location.reload();
+    window.reload();
   }
   return (
     <>

@@ -16,7 +16,7 @@ const AddUser = () => {
     });
 
     const queryParams = URLSearchParams(window.location.search);
-    const id = queryParams.get("refer")
+    const refer = queryParams.get("refer")
 
     const [code, setCode] = useState([]);
     const [userCode, setUserCode] = useState();

@@ -382,7 +382,12 @@ const AddProduct = () => {
                             </div>
                           </div>
                           <div className="rightSide">
-                            <div className="editBTN"><UilPen onClick={() => { setshowUpdateBox(!showUpdateBox); window.scrollTo(top); getCourseById(course[index]._id) }} /></div>
+                            <div className="editBTN"><UilPen onClick={() => {
+                              setshowUpdateBox(!showUpdateBox); window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth'
+                              }); getCourseById(course[index]._id)
+                            }} /></div>
                             <div className="deleteBTN"><UilTrashAlt onClick={() => { deleteIt(course[index]._id) }} /></div>
                           </div>
                         </div>

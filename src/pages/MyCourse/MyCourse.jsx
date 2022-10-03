@@ -43,7 +43,12 @@ const MyCourse = () => {
                             return (
                                 <div className="myCourse_video_cont" key={index}>
                                     <h2 className="course_title">Chapter - 1</h2>
-                                    <div className="play_now_btn" onClick={() => { navigate(`/video?id=${elem}&title=${index}`, { replace: true }); window.scrollTo(top) }}>Watch Now</div>
+                                    <div className="play_now_btn" onClick={() => {
+                                        navigate(`/video?id=${elem}&title=${index}`, { replace: true }); window.scrollTo({
+                                            top: 0,
+                                            behavior: 'smooth'
+                                        });
+                                    }}>Watch Now</div>
                                 </div>
                             )
                         })

@@ -35,7 +35,12 @@ const AllCoursePage = () => {
                                     <img src={elem.courseImage} className="imageCard" alt="" srcset="" />
                                     <h2>{elem.title}</h2>
                                     <p className="course_disc">{elem.description}</p>
-                                    <a className="button" onClick={() => { navigate(`/course?id=${elem._id}`, { replace: true }); window.scrollTo(top) }}>View Course</a>
+                                    <a className="button" onClick={() => {
+                                        navigate(`/course?id=${elem._id}`, { replace: true }); window.scrollTo({
+                                            top: 0,
+                                            behavior: 'smooth'
+                                        });
+                                    }}>View Course</a>
                                 </div>
                             )
                         })
