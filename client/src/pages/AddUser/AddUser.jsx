@@ -11,8 +11,8 @@ const AddUser = () => {
         username: "",
         email: "",
         password: "",
-        code : "",
-        phone : ""
+        code: "",
+        phone: ""
     });
 
     const queryParams = URLSearchParams(window.location.search);
@@ -21,7 +21,7 @@ const AddUser = () => {
     const [code, setCode] = useState([]);
     const [userCode, setUserCode] = useState();
 
-    const[check, setCheck] = useState(false);
+    const [check, setCheck] = useState(false);
 
     const navigate = useNavigate();
 
@@ -44,15 +44,15 @@ const AddUser = () => {
         setUserDetails({ ...userDetails, [e.target.name]: e.target.value });
     }
 
-    const dropdownChange = (e)=>{
+    const dropdownChange = (e) => {
         setUserCode(e.target.value);
-        setUserDetails({code : userCode})
+        setUserDetails({ code: userCode })
     }
 
-    const handleCheckChange = (e)=>{
-        if(e.target.checked){
+    const handleCheckChange = (e) => {
+        if (e.target.checked) {
             setCheck(true);
-        }else{
+        } else {
             console.log("not");
         }
     }
@@ -61,9 +61,9 @@ const AddUser = () => {
         e.preventDefault();
         console.log(userDetails)
 
-        const { username, email, password, code , phone } = userDetails;
+        const { username, email, password, code, phone } = userDetails;
 
-        const res = await fetch("http://localhost:8080/registerUser", {
+        const res = await fetch("https://trdzo.herokuapp.com/registerUser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -73,12 +73,12 @@ const AddUser = () => {
             })
         })
 
-        
+
 
         const result = await res.json();
         const statusCode = res.status;
 
-        if(check == false){
+        if (check == false) {
             toast.error('Please Agree to our Terms and Conditions !!!', {
                 position: "top-right",
                 autoClose: 5000,
@@ -121,7 +121,7 @@ const AddUser = () => {
 
             <div className="user-form-content">
                 <form method="post" className="inputs" onSubmit={handleSubmit}>
-                <img src={user} className="user-logo" alt="userImage" />
+                    <img src={user} className="user-logo" alt="userImage" />
                     <h2>Register Yourself</h2>
 
                     <div className="username">
@@ -165,7 +165,7 @@ const AddUser = () => {
                         <input type="number" name="phone" id="phone" placeholder="Enter Your Phone" onChange={handleChange} autoComplete="off" />
                     </div>
                     <div className="check">
-                        <input type="checkbox" onChange={handleCheckChange}/> <a href="/terms&condition">Terms and Condition</a>
+                        <input type="checkbox" onChange={handleCheckChange} /> <a href="/terms&condition">Terms and Condition</a>
                     </div>
                     <div className="alreadyuser">
                         <a href="/loguser" className="userLink">Already a User</a>

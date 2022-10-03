@@ -29,7 +29,7 @@ const AddProduct = () => {
   }
 
   const getCourse = async () => {
-    const res = await axios("http://localhost:8080/getCourse", {
+    const res = await axios("https://trdzo.herokuapp.com/getCourse", {
       method: "GET",
     });
     setCourse(res.data.course);
@@ -56,7 +56,7 @@ const AddProduct = () => {
       });
     }
 
-    const res = await fetch("http://localhost:8080/addCourse", {
+    const res = await fetch("https://trdzo.herokuapp.com/addCourse", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -124,7 +124,7 @@ const AddProduct = () => {
   }, []);
 
   const deleteIt = async (id) => {
-    const res = await fetch("http://localhost:8080/deleteCourse", {
+    const res = await fetch("https://trdzo.herokuapp.com/deleteCourse", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -141,7 +141,7 @@ const AddProduct = () => {
   }
 
   const getCourseById = async (id) => {
-    const res = await fetch("http://localhost:8080/getCourseById", {
+    const res = await fetch("https://trdzo.herokuapp.com/getCourseById", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -178,7 +178,7 @@ const AddProduct = () => {
       });
     }
 
-    const res = await fetch("http://localhost:8080/updateCourse", {
+    const res = await fetch("https://trdzo.herokuapp.com/updateCourse", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -13,7 +13,7 @@ const StripeContainer = () => {
 
   useEffect(() => {
     const getCourseById = async (id) => {
-      const res = await fetch("http://localhost:8080/getCourseById", {
+      const res = await fetch("https://trdzo.herokuapp.com/getCourseById", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -22,7 +22,7 @@ const Dashboard = () => {
 
   const getSales = async () => {
     try {
-      const res = await fetch("http://localhost:8080/getSales");
+      const res = await fetch("https://trdzo.herokuapp.com/getSales");
 
       const sales = await res.json();
 
@@ -96,7 +96,7 @@ const Dashboard = () => {
           <RevenueCard title={"Yearly Sales"} amount="62000" />
           <RevenueCard title={"Monthly Sales"} amount="2000" />
           <RevenueCard title={"Daily Sales"} amount="700" />
-          <RevenueCard title={"Total Sales"} amount={totalSales/100} />
+          <RevenueCard title={"Total Sales"} amount={totalSales / 100} />
         </div>
 
         <div className="graph-area">

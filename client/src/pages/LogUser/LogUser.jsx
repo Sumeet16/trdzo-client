@@ -19,12 +19,12 @@ const LogUser = () => {
     }
 
     const handleSubmit = async (e) => {
-        
+
         e.preventDefault();
 
         const { email, password } = userDetails;
 
-        const res = await fetch("http://localhost:8080/logUser", {
+        const res = await fetch("https://trdzo.herokuapp.com/logUser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -35,7 +35,7 @@ const LogUser = () => {
         })
         const result = await res.json();
         const statusCode = res.status;
-        
+
         localStorage.setItem("token", result.token);
         localStorage.setItem("userId", result.userData._id);
         localStorage.setItem("userData", result.userData.myLearning);
@@ -71,9 +71,9 @@ const LogUser = () => {
                 draggable: true,
                 progress: undefined,
             });
-            navigate("/", {replace:true})
+            navigate("/", { replace: true })
         }
-       
+
     }
 
     return (

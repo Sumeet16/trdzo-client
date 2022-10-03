@@ -22,7 +22,7 @@ const AddBlog = () => {
   };
 
   const getBlogs = async () => {
-    const res = await axios("http://localhost:8080/getBlogs");
+    const res = await axios("https://trdzo.herokuapp.com/getBlogs");
 
     console.log(res.data.blogs);
     setBlogs(res.data.blogs);
@@ -34,7 +34,7 @@ const AddBlog = () => {
 
   const deleteBlog = async (e) => {
     const title = e.target.className
-    const res = await fetch("http://localhost:8080/deleteBlog", {
+    const res = await fetch("https://trdzo.herokuapp.com/deleteBlog", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -65,7 +65,7 @@ const AddBlog = () => {
     })
     // console.log(slugifiedTitle)
 
-    const res = await fetch("http://localhost:8080/addBlogs", {
+    const res = await fetch("https://trdzo.herokuapp.com/addBlogs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -215,7 +215,7 @@ const AddBlog = () => {
           </button>
         </form>
       </div>
-      <h1 style={{marginInlineStart: "4rem", marginBlock: "3rem"}}>Recent Blog</h1>
+      <h1 style={{ marginInlineStart: "4rem", marginBlock: "3rem" }}>Recent Blog</h1>
       <div className="blog-wrapper-addBlog">
         {blogs.map((elem, index) => {
           return (

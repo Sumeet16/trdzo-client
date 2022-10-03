@@ -13,7 +13,7 @@ const AllCoursePage = () => {
 
     useEffect(() => {
         const getCourse = async () => {
-            const res = await axios("http://localhost:8080/getCourse", {
+            const res = await axios("https://trdzo.herokuapp.com/getCourse", {
                 method: "GET",
             });
             setCourse(res.data.course);
@@ -42,7 +42,7 @@ const AllCoursePage = () => {
                     }
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }

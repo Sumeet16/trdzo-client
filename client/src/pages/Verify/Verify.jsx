@@ -9,31 +9,31 @@ const Verify = () => {
     const [otp, setOtp] = useState();
     const navigate = useNavigate();
 
-    const handleChange = (event)=>{
+    const handleChange = (event) => {
         setOtp(event.target.value)
     }
 
-    const handleSubmit = async(e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const res = await fetch("http://localhost:8080/verify", {
+        const res = await fetch("https://trdzo.herokuapp.com/verify", {
             method: "POST",
             headers: {
-                "Content-Type" : "application/json"
+                "Content-Type": "application/json"
             },
-            body : JSON.stringify({
+            body: JSON.stringify({
                 otp
             })
         });
 
         const result = await res.json();
         const status = res.status;
-        if(status == 500){
+        if (status == 500) {
             alert("Invalid OTP")
-        }else if(status == 422){
+        } else if (status == 422) {
             alert("Error Occurred")
-        }else{
-            navigate("/logUser", {replace: true})
+        } else {
+            navigate("/logUser", { replace: true })
         }
     }
     return (

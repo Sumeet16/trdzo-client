@@ -43,7 +43,7 @@ const PaymentForm = (props) => {
             try {
                 const { id } = paymentMethod
                 const userId = localStorage.getItem("userId")
-                const response = await axios.post("http://localhost:8080/pay", {
+                const response = await axios.post("https://trdzo.herokuapp.com/pay", {
                     amount: amountPayable,
                     id,
                     courseId: props.info._id,
