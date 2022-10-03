@@ -22,13 +22,13 @@ const Header = (props) => {
     }
   }, []);
 
-  const signOutUser = ()=>{
+  const signOutUser = () => {
     localStorage.removeItem("token");
 
 
     localStorage.removeItem("userId");
     localStorage.removeItem("userData");
-    navigate("/", {replace:true})
+    navigate("/", { replace: true })
 
     window.reload();
   }
@@ -37,7 +37,7 @@ const Header = (props) => {
       <header>
         <div className="nav">
           <div className="logo" style={{ color: props.color }}>
-            COURSI<span className="dot">.</span>
+            TRDZO<span className="dot">.</span>
           </div>
 
           <div className="mobile-nav-bar-logo">

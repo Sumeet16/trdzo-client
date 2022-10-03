@@ -28,7 +28,7 @@ const Footer = () => {
                 </div>
                 <div className="line_through"></div>
                 <div className="site_description">
-                    <div className="logo">COURSI<span className='dot'>.</span></div>
+                    <div className="logo">TRDZO<span className='dot'>.</span></div>
                     <div className="site_disc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sed, eum eius molestiae inventore, earum vitae accusantium deserunt dignissimos, voluptatem adipisci soluta incidunt! Incidunt mollitia laboriosam in saepe officia fuga!</p></div>
                     <div className="social_links">
                         <h2 className='follow_us_header'>Follow Us</h2>
@@ -57,7 +57,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="copyright_bar">
-                    <p className="copyright_text">Copyright @ 2022, All Right Reserved <a href='#'>Coursi</a></p>
+                    <p className="copyright_text">Copyright @ 2022, All Right Reserved <a href='#'>TRDZO</a></p>
                 </div>
             </div>
         </>
